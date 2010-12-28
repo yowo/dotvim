@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/usr/share/doc/rubybook/html'
+let g:netrw_dirhist_2='/home/jovan/testing_ground/javascript/v8/v8-read-only/src'
+let g:netrw_dirhist_3='/home/jovan/testing_ground/andriod/SDK/android-sdk-linux_86/samples/android-9/Snake/src/com'
