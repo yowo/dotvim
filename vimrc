@@ -26,10 +26,14 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
+set history=150		" keep 150 lines of command line history
+set undolevels=150		" keep 150 lines of undo history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
 
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -101,5 +105,21 @@ endif
 
 set smartindent
 set tabstop=4
-set shiftwidth=4
 set expandtab
+
+set nowrap        " don't wrap lines
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+if has("autocmd")
+	autocmd filetype html,xml set listchars-=tab:>.
+endif
