@@ -13,9 +13,4 @@ Installation:
         git submodule init
         git submodule update
 
-    How to add other plugins as git submodules in bundle:
 
-        cd ~/.vim
-        git submodule add  https://github.com/tpope/vim-pathogen.git bundle/pathogen
-        git add .
-        git commit -m "Install Pathogen.vim bundle as a submodule."
